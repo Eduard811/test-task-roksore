@@ -1,0 +1,8 @@
+@media screen and (max-width: 767px) {
+  .l-content__section__inside {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  @import '../blocks/feedback/b-feedback-s';
+}

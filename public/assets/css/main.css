@@ -1,0 +1,1061 @@
+@charset "UTF-8";
+/* Reset (default browsers styles erasing) */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Reset (default browsers styles erasing) */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+*:focus {
+  outline: 0; }
+
+/* Remove list styles and paddings on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth; }
+
+/* Fonts (including not standart fonts) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+/* Overrides extra padding in Firefox */
+/* Overrides extra padding in Firefox */
+button::-moz-focus-inner {
+  padding: 0;
+  border: none; }
+
+input[type='number'] {
+  -moz-appearance: textfield; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+input, button {
+  -webkit-appearance: none; }
+
+*:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0; }
+
+*:-moz-submit-invalid {
+  box-shadow: none;
+  border: 0; }
+
+*:-moz-ui-invalid {
+  box-shadow: none;
+  border: 0; }
+
+/* Variables */
+/* Common (common styles) */
+/* Common (common styles) */
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  background-color: #F5F7FA;
+  color: #0F1011;
+  font-size: 24px;
+  line-height: 34px; }
+
+/* Layout / prefix — l- */
+/* Layout / prefix — l- */
+.l-outer {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.l-content__section__inside {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative; }
+
+/* Basic (basic blocks, which are the basis) / prefix — b- */
+.b-feedback {
+  padding: 60px 0 100px 0; }
+  .b-feedback__title {
+    width: 431px; }
+    .b-feedback__title_tablet {
+      display: none; }
+    .b-feedback__title h1 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      color: #0F1011;
+      position: relative;
+      top: -6px; }
+  .b-feedback__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 27px; }
+  .b-feedback__cards {
+    margin-right: 30px; }
+
+.b-feedback__cards__show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 770px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 30px; }
+
+.b-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 770px; }
+  .b-cards__card {
+    position: relative;
+    margin-top: 10px; }
+    .b-cards__card:first-child {
+      margin-top: unset; }
+
+.card {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 26px 30px 33px 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 6px 29px 0px #0F10110D;
+  box-shadow: 0px 6px 29px 0px #0F10110D; }
+  .card__setting-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    padding: 0;
+    width: 22px;
+    height: 22px; }
+  .card__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .card__header__avatar {
+      width: 48px;
+      margin-right: 17px; }
+      .card__header__avatar img {
+        display: block;
+        width: 100%; }
+    .card__header__content__top {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      position: relative; }
+      .card__header__content__top__rating {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 28px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: #0F1011;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: absolute;
+        left: 562px; }
+        .card__header__content__top__rating img {
+          width: 22px;
+          margin-right: 3px; }
+      .card__header__content__top .user__name {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #0F1011;
+        margin-right: 7px; }
+      .card__header__content__top .user__status {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 3px 7px; }
+        .card__header__content__top .user__status_green {
+          border: 1px solid #10B97B;
+          color: #10B97B; }
+        .card__header__content__top .user__status_red {
+          border: 1px solid #E3405E;
+          color: #E3405E; }
+      .card__header__content__top .frame {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        max-width: 450px; }
+        .card__header__content__top .frame__user {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-right: 25px; }
+        .card__header__content__top .frame__country {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #42464B;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-right: 25px; }
+          .card__header__content__top .frame__country img {
+            width: 16px;
+            margin-right: 8px; }
+        .card__header__content__top .frame__date {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #87919C;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center; }
+    .card__header__content__bottom {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 4px;
+      width: 560px; }
+      .card__header__content__bottom__message {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #87919C;
+        margin-right: 15px; }
+      .card__header__content__bottom img {
+        margin-right: 15px; }
+      .card__header__content__bottom__address {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #42464B; }
+        .card__header__content__bottom__address a {
+          color: #1373E5; }
+  .card__body__wrap {
+    margin-top: 18px; }
+  .card__body .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 5px; }
+    .card__body .description:first-child {
+      margin-top: unset; }
+      .card__body .description:first-child p {
+        position: relative;
+        top: -4px; }
+    .card__body .description__button {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      margin-right: 13px; }
+    .card__body .description__text {
+      width: 675px; }
+      .card__body .description__text p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 28px;
+        color: #42464B; }
+  .card__footer {
+    margin-top: 19px; }
+    .card__footer__wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .card__footer__wrap__survey {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 114px;
+        margin-right: 10px; }
+    .card__footer .survey {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-right: 20px; }
+      .card__footer .survey:last-child {
+        margin-right: unset; }
+      .card__footer .survey__button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0;
+        width: 22px;
+        height: 22px;
+        margin-right: 9px; }
+        .card__footer .survey__button svg path {
+          -webkit-transition: all 0.1s ease-in;
+          transition: all 0.1s ease-in; }
+        .card__footer .survey__button_like:hover svg path {
+          fill: #10B97B; }
+        .card__footer .survey__button_like_ok svg path {
+          fill: #10B97B; }
+        .card__footer .survey__button_dislike {
+          -webkit-transition: 5s ease-in;
+          transition: 5s ease-in; }
+          .card__footer .survey__button_dislike:hover svg path {
+            fill: #E3405E; }
+          .card__footer .survey__button_dislike_ok svg path {
+            fill: #E3405E; }
+      .card__footer .survey__counter {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+        color: #87919C; }
+
+.b-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1373E5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #1373E5;
+  border-radius: 40px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .b-button_outline {
+    min-width: 129px;
+    padding: 10px 17px; }
+  .b-button_show {
+    height: 48px;
+    padding: 0 15px 0 21px; }
+  .b-button__text {
+    margin-right: 10px; }
+  .b-button__counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 4px;
+    border-radius: 50%;
+    background: #1373e51a; }
+
+.rating {
+  position: sticky;
+  top: 10px;
+  width: 370px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 6px 29px 0px #0F10110D;
+  box-shadow: 0px 6px 29px 0px #0F10110D;
+  padding: 30px 0 47px 0; }
+  .rating__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .rating__title h1 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      color: #0F1011;
+      position: relative;
+      top: -6px; }
+  .rating__wrapper__progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 27px;
+    padding: 0 16px 0 40px; }
+  .rating .progress {
+    width: 246px;
+    margin-top: 15px;
+    position: relative; }
+    .rating .progress:first-child {
+      margin-top: unset; }
+    .rating .progress__title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: #0F1011;
+      position: relative;
+      top: -3px; }
+    .rating .progress:nth-child(1)::before {
+      content: '4.8';
+      position: absolute;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #0F1011;
+      right: -36px;
+      top: 26px;
+      min-width: 25px; }
+    .rating .progress:nth-child(2)::before {
+      content: '3.1';
+      position: absolute;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #0F1011;
+      right: -36px;
+      top: 26px;
+      min-width: 25px; }
+    .rating .progress:nth-child(3)::before {
+      content: '1.6';
+      position: absolute;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #0F1011;
+      right: -36px;
+      top: 26px;
+      min-width: 25px; }
+  .rating .progress progress {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    left: -777px; }
+  .rating .progress-bar {
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px; }
+    .rating .progress-bar_green {
+      background: #10B97B; }
+    .rating .progress-bar_orange {
+      background: #FABD48; }
+    .rating .progress-bar_red {
+      background: #E3405E; }
+  .rating .progress-bg {
+    background: #eaf1f9;
+    position: relative;
+    height: 6px;
+    border-radius: 5px;
+    overflow: hidden; }
+
+.feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 25px; }
+  .feedback__indicator__big {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 52px;
+    font-size: 50px;
+    color: #0F1011; }
+  .feedback__indicator__small {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 52px;
+    font-size: 20px;
+    color: #0F1011; }
+  .feedback__stars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 180px;
+    margin-top: 6px; }
+    .feedback__stars img {
+      width: 27px;
+      margin-right: 9px; }
+      .feedback__stars img:last-child {
+        margin-right: unset; }
+  .feedback__amount {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #87919C;
+    margin-top: 22px; }
+
+.progress progress[value='0'] ~ .progress-bg .progress-bar {
+  width: 0%; }
+
+.progress progress[value='1'] ~ .progress-bg .progress-bar {
+  width: 1%; }
+
+.progress progress[value='2'] ~ .progress-bg .progress-bar {
+  width: 2%; }
+
+.progress progress[value='3'] ~ .progress-bg .progress-bar {
+  width: 3%; }
+
+.progress progress[value='4'] ~ .progress-bg .progress-bar {
+  width: 4%; }
+
+.progress progress[value='5'] ~ .progress-bg .progress-bar {
+  width: 5%; }
+
+.progress progress[value='6'] ~ .progress-bg .progress-bar {
+  width: 6%; }
+
+.progress progress[value='7'] ~ .progress-bg .progress-bar {
+  width: 7%; }
+
+.progress progress[value='8'] ~ .progress-bg .progress-bar {
+  width: 8%; }
+
+.progress progress[value='9'] ~ .progress-bg .progress-bar {
+  width: 9%; }
+
+.progress progress[value='10'] ~ .progress-bg .progress-bar {
+  width: 10%; }
+
+.progress progress[value='11'] ~ .progress-bg .progress-bar {
+  width: 11%; }
+
+.progress progress[value='12'] ~ .progress-bg .progress-bar {
+  width: 12%; }
+
+.progress progress[value='13'] ~ .progress-bg .progress-bar {
+  width: 13%; }
+
+.progress progress[value='14'] ~ .progress-bg .progress-bar {
+  width: 14%; }
+
+.progress progress[value='15'] ~ .progress-bg .progress-bar {
+  width: 15%; }
+
+.progress progress[value='16'] ~ .progress-bg .progress-bar {
+  width: 16%; }
+
+.progress progress[value='17'] ~ .progress-bg .progress-bar {
+  width: 17%; }
+
+.progress progress[value='18'] ~ .progress-bg .progress-bar {
+  width: 18%; }
+
+.progress progress[value='19'] ~ .progress-bg .progress-bar {
+  width: 19%; }
+
+.progress progress[value='20'] ~ .progress-bg .progress-bar {
+  width: 20%; }
+
+.progress progress[value='21'] ~ .progress-bg .progress-bar {
+  width: 21%; }
+
+.progress progress[value='22'] ~ .progress-bg .progress-bar {
+  width: 22%; }
+
+.progress progress[value='23'] ~ .progress-bg .progress-bar {
+  width: 23%; }
+
+.progress progress[value='24'] ~ .progress-bg .progress-bar {
+  width: 24%; }
+
+.progress progress[value='25'] ~ .progress-bg .progress-bar {
+  width: 25%; }
+
+.progress progress[value='26'] ~ .progress-bg .progress-bar {
+  width: 26%; }
+
+.progress progress[value='27'] ~ .progress-bg .progress-bar {
+  width: 27%; }
+
+.progress progress[value='28'] ~ .progress-bg .progress-bar {
+  width: 28%; }
+
+.progress progress[value='29'] ~ .progress-bg .progress-bar {
+  width: 29%; }
+
+.progress progress[value='30'] ~ .progress-bg .progress-bar {
+  width: 30%; }
+
+.progress progress[value='31'] ~ .progress-bg .progress-bar {
+  width: 31%; }
+
+.progress progress[value='32'] ~ .progress-bg .progress-bar {
+  width: 32%; }
+
+.progress progress[value='33'] ~ .progress-bg .progress-bar {
+  width: 33%; }
+
+.progress progress[value='34'] ~ .progress-bg .progress-bar {
+  width: 34%; }
+
+.progress progress[value='35'] ~ .progress-bg .progress-bar {
+  width: 35%; }
+
+.progress progress[value='36'] ~ .progress-bg .progress-bar {
+  width: 36%; }
+
+.progress progress[value='37'] ~ .progress-bg .progress-bar {
+  width: 37%; }
+
+.progress progress[value='38'] ~ .progress-bg .progress-bar {
+  width: 38%; }
+
+.progress progress[value='39'] ~ .progress-bg .progress-bar {
+  width: 39%; }
+
+.progress progress[value='40'] ~ .progress-bg .progress-bar {
+  width: 40%; }
+
+.progress progress[value='41'] ~ .progress-bg .progress-bar {
+  width: 41%; }
+
+.progress progress[value='42'] ~ .progress-bg .progress-bar {
+  width: 42%; }
+
+.progress progress[value='43'] ~ .progress-bg .progress-bar {
+  width: 43%; }
+
+.progress progress[value='44'] ~ .progress-bg .progress-bar {
+  width: 44%; }
+
+.progress progress[value='45'] ~ .progress-bg .progress-bar {
+  width: 45%; }
+
+.progress progress[value='46'] ~ .progress-bg .progress-bar {
+  width: 46%; }
+
+.progress progress[value='47'] ~ .progress-bg .progress-bar {
+  width: 47%; }
+
+.progress progress[value='48'] ~ .progress-bg .progress-bar {
+  width: 48%; }
+
+.progress progress[value='49'] ~ .progress-bg .progress-bar {
+  width: 49%; }
+
+.progress progress[value='50'] ~ .progress-bg .progress-bar {
+  width: 50%; }
+
+.progress progress[value='51'] ~ .progress-bg .progress-bar {
+  width: 51%; }
+
+.progress progress[value='52'] ~ .progress-bg .progress-bar {
+  width: 52%; }
+
+.progress progress[value='53'] ~ .progress-bg .progress-bar {
+  width: 53%; }
+
+.progress progress[value='54'] ~ .progress-bg .progress-bar {
+  width: 54%; }
+
+.progress progress[value='55'] ~ .progress-bg .progress-bar {
+  width: 55%; }
+
+.progress progress[value='56'] ~ .progress-bg .progress-bar {
+  width: 56%; }
+
+.progress progress[value='57'] ~ .progress-bg .progress-bar {
+  width: 57%; }
+
+.progress progress[value='58'] ~ .progress-bg .progress-bar {
+  width: 58%; }
+
+.progress progress[value='59'] ~ .progress-bg .progress-bar {
+  width: 59%; }
+
+.progress progress[value='60'] ~ .progress-bg .progress-bar {
+  width: 60%; }
+
+.progress progress[value='61'] ~ .progress-bg .progress-bar {
+  width: 61%; }
+
+.progress progress[value='62'] ~ .progress-bg .progress-bar {
+  width: 62%; }
+
+.progress progress[value='63'] ~ .progress-bg .progress-bar {
+  width: 63%; }
+
+.progress progress[value='64'] ~ .progress-bg .progress-bar {
+  width: 64%; }
+
+.progress progress[value='65'] ~ .progress-bg .progress-bar {
+  width: 65%; }
+
+.progress progress[value='66'] ~ .progress-bg .progress-bar {
+  width: 66%; }
+
+.progress progress[value='67'] ~ .progress-bg .progress-bar {
+  width: 67%; }
+
+.progress progress[value='68'] ~ .progress-bg .progress-bar {
+  width: 68%; }
+
+.progress progress[value='69'] ~ .progress-bg .progress-bar {
+  width: 69%; }
+
+.progress progress[value='70'] ~ .progress-bg .progress-bar {
+  width: 70%; }
+
+.progress progress[value='71'] ~ .progress-bg .progress-bar {
+  width: 71%; }
+
+.progress progress[value='72'] ~ .progress-bg .progress-bar {
+  width: 72%; }
+
+.progress progress[value='73'] ~ .progress-bg .progress-bar {
+  width: 73%; }
+
+.progress progress[value='74'] ~ .progress-bg .progress-bar {
+  width: 74%; }
+
+.progress progress[value='75'] ~ .progress-bg .progress-bar {
+  width: 75%; }
+
+.progress progress[value='76'] ~ .progress-bg .progress-bar {
+  width: 76%; }
+
+.progress progress[value='77'] ~ .progress-bg .progress-bar {
+  width: 77%; }
+
+.progress progress[value='78'] ~ .progress-bg .progress-bar {
+  width: 78%; }
+
+.progress progress[value='79'] ~ .progress-bg .progress-bar {
+  width: 79%; }
+
+.progress progress[value='80'] ~ .progress-bg .progress-bar {
+  width: 80%; }
+
+.progress progress[value='81'] ~ .progress-bg .progress-bar {
+  width: 81%; }
+
+.progress progress[value='82'] ~ .progress-bg .progress-bar {
+  width: 82%; }
+
+.progress progress[value='83'] ~ .progress-bg .progress-bar {
+  width: 83%; }
+
+.progress progress[value='84'] ~ .progress-bg .progress-bar {
+  width: 84%; }
+
+.progress progress[value='85'] ~ .progress-bg .progress-bar {
+  width: 85%; }
+
+.progress progress[value='86'] ~ .progress-bg .progress-bar {
+  width: 86%; }
+
+.progress progress[value='87'] ~ .progress-bg .progress-bar {
+  width: 87%; }
+
+.progress progress[value='88'] ~ .progress-bg .progress-bar {
+  width: 88%; }
+
+.progress progress[value='89'] ~ .progress-bg .progress-bar {
+  width: 89%; }
+
+.progress progress[value='90'] ~ .progress-bg .progress-bar {
+  width: 90%; }
+
+.progress progress[value='91'] ~ .progress-bg .progress-bar {
+  width: 91%; }
+
+.progress progress[value='92'] ~ .progress-bg .progress-bar {
+  width: 92%; }
+
+.progress progress[value='93'] ~ .progress-bg .progress-bar {
+  width: 93%; }
+
+.progress progress[value='94'] ~ .progress-bg .progress-bar {
+  width: 94%; }
+
+.progress progress[value='95'] ~ .progress-bg .progress-bar {
+  width: 95%; }
+
+.progress progress[value='96'] ~ .progress-bg .progress-bar {
+  width: 96%; }
+
+.progress progress[value='97'] ~ .progress-bg .progress-bar {
+  width: 97%; }
+
+.progress progress[value='98'] ~ .progress-bg .progress-bar {
+  width: 98%; }
+
+.progress progress[value='99'] ~ .progress-bg .progress-bar {
+  width: 99%; }
+
+.progress progress[value='100'] ~ .progress-bg .progress-bar {
+  width: 100%; }

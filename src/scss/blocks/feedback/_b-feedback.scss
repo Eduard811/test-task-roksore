@@ -1,0 +1,481 @@
+.b-feedback {
+  padding: 60px 0 100px 0;
+  &__title {
+    width: 431px;
+
+    &_tablet {
+        display: none;
+    }
+    & h1 {
+      @include desktop-h3;
+      color: $main-black;
+      position: relative;
+      top: -6px;
+    }
+  }
+  &__wrap {
+    display: flex;
+    margin-top: 27px;
+  }
+
+  &__cards {
+    margin-right: 30px;
+  }
+}
+
+.b-feedback__cards__show {
+  display: flex;
+  width: 770px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.b-cards {
+  display: flex;
+  flex-direction: column;
+  width: 770px;
+
+  &__card {
+    position: relative;
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: unset;
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  background-color: $background-card;
+  padding: 26px 30px 33px 30px;
+  border-radius: 5px;
+  box-shadow: $shadow;
+
+  &__setting-button {
+    @include icon-button;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+  }
+
+  &__header {
+    display: flex;
+
+    &__avatar {
+      width: 48px;
+      margin-right: 17px;
+      & img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &__content {
+      &__top {
+        display: flex;
+        width: 100%;
+        position: relative;
+
+        &__rating {
+          @include desktop-text-normal-bold;
+          color: $main-black;
+          display: flex;
+          align-items: center;
+          position: absolute;
+          left: 562px;
+          & img {
+            width: 22px;
+            margin-right: 3px;
+          }
+        }
+
+        .user {
+          &__name {
+            @include desktop-h4;
+            color: $main-black;
+            margin-right: 7px;
+          }
+
+          &__status {
+            @include status;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            padding: 3px 7px;
+
+            &_green {
+              border: 1px solid $green;
+              color: $green;
+            }
+
+            &_red {
+              border: 1px solid $red;
+              color: $red;
+            }
+          }
+        }
+
+        .frame {
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 450px;
+
+          &__user {
+            display: flex;
+            align-items: center;
+            margin-right: 25px;
+          }
+
+          &__country {
+            @include desktop-text-small;
+            color: $text;
+            display: flex;
+            align-items: center;
+            margin-right: 25px;
+            & img {
+              width: 16px;
+              margin-right: 8px;
+            }
+          }
+
+          &__date {
+            @include desktop-text-small;
+            color: $gray;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+
+      &__bottom {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        width: 560px;
+
+        &__message {
+          @include desktop-text-small;
+          color: $gray;
+          margin-right: 15px;
+        }
+
+        & img {
+          margin-right: 15px;
+        }
+
+        &__address {
+          @include desktop-text-small;
+          color: $text;
+          & a {
+            color: $main-blue;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    &__wrap {
+      margin-top: 18px;
+    }
+
+    .description {
+      display: flex;
+      margin-top: 5px;
+      &:first-child {
+        & p {
+          position: relative;
+          top: -4px;
+        }
+        margin-top: unset;
+      }
+      &__button {
+        @include icon-button;
+        width: 24px;
+        height: 24px;
+        margin-right: 13px;
+      }
+
+      &__text {
+        width: 675px;
+        & p {
+          @include desktop-text-normal;
+          color: $text;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 19px;
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+
+      &__survey {
+        display: flex;
+        width: 114px;
+        margin-right: 10px;
+      }
+    }
+
+    .survey {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: unset;
+      }
+      &__button {
+        @include icon-button;
+        width: 22px;
+        height: 22px;
+        margin-right: 9px;
+        & svg {
+          & path {
+            transition: all 0.1s ease-in;
+          }
+        }
+
+        &_like {
+          &:hover {
+            & svg {
+              & path {
+                fill: $green;
+              }
+            }
+          }
+          &_ok {
+            & svg {
+              & path {
+                fill: $green;
+              }
+            }
+          }
+        }
+
+        &_dislike {
+          transition: 5s ease-in;
+          &:hover {
+            & svg {
+              & path {
+                fill: $red;
+              }
+            }
+          }
+
+          &_ok {
+            & svg {
+              & path {
+                fill: $red;
+              }
+            }
+          }
+        }
+      }
+
+      &__counter {
+        @include desktop-text-small-bold;
+        color: $gray;
+      }
+    }
+  }
+}
+
+.b-button {
+  @include default-button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_outline {
+    min-width: 129px;
+    padding: 10px 17px;
+  }
+
+  &_show {
+    height: 48px;
+    padding: 0 15px 0 21px;
+  }
+
+  &__text {
+    margin-right: 10px;
+  }
+
+  &__counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 4px;
+    border-radius: 50%;
+    background: #1373e51a;
+  }
+}
+
+.rating {
+  position: sticky;
+  top: 10px;
+  width: 370px;
+  background-color: $background-card;
+  border-radius: 5px;
+  box-shadow: $shadow;
+  padding: 30px 0 47px 0;
+  &__title {
+    display: flex;
+    justify-content: center;
+    & h1 {
+      @include desktop-h3;
+      color: $main-black;
+      position: relative;
+      top: -6px;
+    }
+  }
+
+  &__wrapper__progress {
+    display: flex;
+    flex-direction: column;
+    margin-top: 27px;
+    padding: 0 16px 0 40px;
+  }
+
+  .progress {
+    width: 246px;
+    margin-top: 15px;
+    position: relative;
+    &:first-child {
+        margin-top: unset;
+    }
+    &__title {
+        @include desktop-text-small;
+        color: $main-black;
+        position: relative;
+        top: -3px;
+    }
+
+    &:nth-child(1) {
+        &::before {
+            content: '4.8';
+            position: absolute;
+            @include desktop-h4;
+            color: $main-black;
+            right: -36px;
+            top: 26px;
+            min-width: 25px;
+        }
+    }
+    &:nth-child(2) {
+        &::before {
+            content: '3.1';
+            position: absolute;
+            @include desktop-h4;
+            color: $main-black;
+            right: -36px;
+            top: 26px;
+            min-width: 25px;
+        }
+    }
+    &:nth-child(3) {
+        &::before {
+            content: '1.6';
+            position: absolute;
+            @include desktop-h4;
+            color: $main-black;
+            right: -36px;
+            top: 26px;
+            min-width: 25px;
+        }
+    }
+  }
+
+  .progress progress {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    left: -777px;
+  }
+
+  .progress-bar {
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+
+    &_green {
+        background: $green;
+    }
+
+    &_orange {
+        background: $orange;
+    }
+
+    &_red {
+        background: $red;
+    }
+  }
+
+  .progress-bg {
+    background: #eaf1f9;
+    position: relative;
+    height: 6px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  &__indicator {
+    &__big {
+      @include rating-big;
+      color: $main-black;
+    }
+
+    &__small {
+      @include rating-small;
+      color: $main-black;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    margin-top: 6px;
+    & img {
+      width: 27px;
+      margin-right: 9px;
+      &:last-child {
+        margin-right: unset;
+      }
+    }
+  }
+
+  &__amount {
+    @include feedback-small;
+    color: $gray;
+    margin-top: 22px;
+  }
+}
+
+@for $i from 0 through 100 {
+  .progress progress[value='#{$i}'] {
+    & ~ .progress-bg .progress-bar {
+      width: $i * 1%;
+    }
+  }
+}

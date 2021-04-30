@@ -1,0 +1,34 @@
+/* Overrides extra padding in Firefox */ 
+button::-moz-focus-inner {
+	padding: 0;
+	border: none;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none
+}
+
+input, button {
+	-webkit-appearance: none
+}
+
+*:invalid {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: 0
+}
+
+*:-moz-submit-invalid {
+	box-shadow: none;
+	border: 0;
+}
+
+*:-moz-ui-invalid {
+	box-shadow: none;
+	border: 0;
+}

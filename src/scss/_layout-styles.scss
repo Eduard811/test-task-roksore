@@ -1,0 +1,14 @@
+/* Layout / prefix — l- */
+
+.l-outer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.l-content__section__inside {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}

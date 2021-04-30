@@ -1,0 +1,14 @@
+/* Reset (default browsers styles erasing) */
+@import '_reset';
+/* Fonts (including not standart fonts) */
+@import '_fonts';
+/* Overrides extra padding in Firefox */ 
+@import '_firefox-overrides';
+/* Variables */
+@import './variables/_variables';
+/* Common (common styles) */
+@import '_common-styles';
+/* Layout / prefix — l- */
+@import '_layout-styles';
+/* Basic (basic blocks, which are the basis) / prefix — b- */
+@import '_blocks-styles';

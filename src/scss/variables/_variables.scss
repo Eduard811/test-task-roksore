@@ -1,0 +1,118 @@
+// text styles
+$primary-font: 'Montserrat', sans-serif;
+
+@mixin desktop-h3 {
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+@mixin desktop-h4 {
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+@mixin desktop-text-normal {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+@mixin desktop-h1 {
+    font-family: $primary-font;
+    font-weight: 500;
+    line-height: 52px;
+}
+
+@mixin rating-big {
+    @include desktop-h1;
+    font-size: 50px;
+}
+
+@mixin rating-small {
+    @include desktop-h1;
+    font-size: 20px;
+}
+
+@mixin feedback-small {
+    font-family: $primary-font;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+@mixin desktop-text-normal-bold {
+    @include desktop-text-normal;
+    font-family: $primary-font;
+    font-weight: 600;
+}
+
+
+@mixin desktop-text-small {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@mixin desktop-text-small-bold {
+    @include desktop-text-small;
+    font-weight: 600;
+}
+
+@mixin button-small {
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@mixin status {
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+//color-styles
+$main-black: #0F1011;
+$main-blue: #1373E5;
+$text: #42464B;
+$green: #10B97B;
+$orange: #FABD48;
+$red: #E3405E;
+$gray: #87919C;
+
+$background: #F5F7FA;
+$background-card: #FFFFFF;
+
+$shadow: 0px 6px 29px 0px #0F10110D;
+
+//button
+@mixin default-button {
+    @include button-small;
+    color: $main-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $main-blue;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+}
+
+@mixin icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
