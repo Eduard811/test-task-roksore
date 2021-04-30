@@ -45,7 +45,9 @@
     .b-feedback .card__header__content__top__rating {
       left: 481px; }
     .b-feedback .b-feedback__cards__show {
-      width: 100%; } }
+      width: 100%; }
+    .b-feedback .description__text {
+      width: auto; } }
 
 @media screen and (max-width: 767px) {
   .l-content__section__inside {
