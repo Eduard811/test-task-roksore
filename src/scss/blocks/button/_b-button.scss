@@ -1,0 +1,31 @@
+.b-button {
+    @include default-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &_outline {
+      min-width: 129px;
+      padding: 10px 17px;
+    }
+  
+    &_show {
+      height: 48px;
+      padding: 0 15px 0 21px;
+    }
+  
+    &__text {
+      margin-right: 10px;
+    }
+  
+    &__counter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 32px;
+      height: 32px;
+      padding: 4px;
+      border-radius: 50%;
+      background: #1373e51a;
+    }
+  }

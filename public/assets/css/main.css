@@ -357,6 +357,8 @@ body {
         .card__header__content__top__rating img {
           width: 22px;
           margin-right: 3px; }
+        .card__header__content__top__rating_mobile {
+          display: none; }
       .card__header__content__top .user__name {
         font-family: "Montserrat", sans-serif;
         font-size: 16px;
@@ -400,7 +402,9 @@ body {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          margin-right: 25px; }
+          margin-right: 25px;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
         .card__header__content__top .frame__country {
           font-family: "Montserrat", sans-serif;
           font-weight: 400;
@@ -457,41 +461,6 @@ body {
           color: #1373E5; }
   .card__body__wrap {
     margin-top: 18px; }
-  .card__body .description {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 5px; }
-    .card__body .description:first-child {
-      margin-top: unset; }
-      .card__body .description:first-child p {
-        position: relative;
-        top: -4px; }
-    .card__body .description__button {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      padding: 0;
-      width: 24px;
-      height: 24px;
-      margin-right: 13px; }
-    .card__body .description__text {
-      width: 675px; }
-      .card__body .description__text p {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 28px;
-        color: #42464B; }
   .card__footer {
     margin-top: 19px; }
     .card__footer__wrap {
@@ -556,38 +525,17 @@ body {
         font-weight: 600;
         color: #87919C; }
 
-.b-button {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
-  color: #1373E5;
+.description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px solid #1373E5;
-  border-radius: 40px;
-  cursor: pointer;
-  position: relative;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .b-button_outline {
-    min-width: 129px;
-    padding: 10px 17px; }
-  .b-button_show {
-    height: 48px;
-    padding: 0 15px 0 21px; }
-  .b-button__text {
-    margin-right: 10px; }
-  .b-button__counter {
+  margin-top: 5px; }
+  .description:first-child {
+    margin-top: unset; }
+    .description:first-child p {
+      position: relative;
+      top: -4px; }
+  .description__icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -597,11 +545,30 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    min-width: 32px;
-    height: 32px;
-    padding: 4px;
-    border-radius: 50%;
-    background: #1373e51a; }
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 13px;
+    cursor: auto; }
+  .description__text-icon {
+    display: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #0F1011; }
+  .description__text {
+    width: 675px; }
+    .description__text p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 28px;
+      color: #42464B; }
 
 .rating {
   position: sticky;
@@ -619,7 +586,7 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .rating__title h1 {
+    .rating__title h3 {
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
       font-size: 20px;
@@ -1059,3 +1026,50 @@ body {
 
 .progress progress[value='100'] ~ .progress-bg .progress-bar {
   width: 100%; }
+
+.b-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1373E5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #1373E5;
+  border-radius: 40px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .b-button_outline {
+    min-width: 129px;
+    padding: 10px 17px; }
+  .b-button_show {
+    height: 48px;
+    padding: 0 15px 0 21px; }
+  .b-button__text {
+    margin-right: 10px; }
+  .b-button__counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 4px;
+    border-radius: 50%;
+    background: #1373e51a; }

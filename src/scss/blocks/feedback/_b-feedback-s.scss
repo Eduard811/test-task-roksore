@@ -1,0 +1,207 @@
+.b-feedback {
+    padding: 0 0 40px 0;
+
+    &__wrap {
+        margin-top: unset;
+    }
+
+    &__title {
+        width: 100%;
+        & h1 {
+            @include desktop-h4;
+            position: static;
+        }
+    }
+
+    &__cards {
+        margin-top: 29px;
+    }
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px 42px 16px;
+    width: 100vw;
+    margin-left: calc((100% - 100vw) / 2);
+
+    &__title {
+        width: 288px;
+        margin-top: 18px;
+        & h3 {
+            @include desktop-h4;
+        }
+    }
+
+    &__wrapper {
+        flex-direction: column;
+        width: 288px;
+    }
+
+    .feedback {
+        margin-top: 16px;
+        &__indicator {
+            &__big {
+                font-size: 40px;
+            }
+
+            &__small {
+                font-weight: 400;
+            }
+        }
+
+        &__stars {
+            width: 160px;
+            margin-top: unset;
+            & img {
+                width: 24px;
+                height: 24px;
+                margin-right: 7px;
+                &:last-child {
+                    margin-right: unset;
+                }
+            }
+        }
+
+        &__amount {
+            margin-top: 12px;
+        }
+    }
+}
+
+.rating__wrapper__progress {
+    .progress {
+        margin-top: 5px;
+    }
+}
+
+.card {
+    padding: 20px 20px 24px 20px;
+
+    &__header {
+        &__avatar {
+            max-width: 40px;
+            min-width: 40px;
+            padding-top: 3px;
+        }
+        &__content {
+            width: 100%;
+        }
+    }
+
+    &__footer {
+        margin-top: 8px;
+    }
+}
+
+.card__footer__wrap__survey {
+    margin-right: unset;
+    width: 106px;
+    .survey {
+        margin-right: 20px;
+
+        &__button {
+            margin-right: 4px;
+        }
+    }
+}
+
+.card__header__content__top__frame {
+    .frame {
+        max-width: 280px;
+        flex-direction: column;
+        &__user {
+            margin-right: unset;
+            .user__name {
+                @include desktop-text-small-bold;
+            }
+        }
+
+        &__country {
+            margin-right: unset;
+            line-height: 24px;
+        }
+
+        &__date {
+            line-height: 24px;
+        }
+    }
+}
+
+.card__header__content__bottom {
+    width: 100%;
+    margin-top: 8px;
+    &__message {
+        display: none;
+    }
+
+    &__dot {
+        display: none;
+    }
+
+    &__address {
+        display: flex;
+        align-items: center;
+        line-height: 24px;
+        margin-left: calc(-40px + -17px);
+    }
+}
+
+.card__header__content__top__rating {
+    display: none;
+    &_mobile {
+        display: flex;
+        position: static;
+        margin-right: 12px;
+        & img {
+            margin-right: unset;
+        }
+    }
+}
+
+.b-cards {
+    margin-top: 22px;
+}
+
+.card__setting-button {
+    right: 10px;
+    top: 19px;
+}
+
+.description {
+    flex-direction: column;
+
+    &__icon-frame {
+        display: flex;
+        align-items: center;
+    }
+    &__text-icon {
+        display: flex;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+
+        &_disadvantages {
+            & svg {
+                & path {
+                    fill: $red;
+                }
+            }
+        }
+    }
+    &__text {
+        margin-top: 6px;
+        & p {
+            line-height: 24px;
+            font-size: 14px;
+        }
+    }
+}
+
+.card__body__wrap {
+    margin-top: 10px;
+}

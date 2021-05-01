@@ -1,0 +1,9 @@
+.b-button {
+    &_outline {
+        border: none;
+        min-width: 69px;
+        height: 24;
+        padding: unset;
+        line-height: 24px;
+    }
+}

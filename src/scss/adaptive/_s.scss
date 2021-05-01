@@ -2,7 +2,9 @@
   .l-content__section__inside {
     width: 100%;
     padding: 0 16px;
+    overflow: hidden
   }
 
   @import '../blocks/feedback/b-feedback-s';
+  @import '../blocks/button/b-button-s';
 }

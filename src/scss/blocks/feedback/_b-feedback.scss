@@ -91,6 +91,10 @@
             width: 22px;
             margin-right: 3px;
           }
+
+          &_mobile {
+            display: none;
+          }
         }
 
         .user {
@@ -129,6 +133,7 @@
             display: flex;
             align-items: center;
             margin-right: 25px;
+            flex-wrap: wrap;
           }
 
           &__country {
@@ -182,32 +187,6 @@
   &__body {
     &__wrap {
       margin-top: 18px;
-    }
-
-    .description {
-      display: flex;
-      margin-top: 5px;
-      &:first-child {
-        & p {
-          position: relative;
-          top: -4px;
-        }
-        margin-top: unset;
-      }
-      &__button {
-        @include icon-button;
-        width: 24px;
-        height: 24px;
-        margin-right: 13px;
-      }
-
-      &__text {
-        width: 675px;
-        & p {
-          @include desktop-text-normal;
-          color: $text;
-        }
-      }
     }
   }
 
@@ -288,35 +267,35 @@
   }
 }
 
-.b-button {
-  @include default-button;
+.description {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &_outline {
-    min-width: 129px;
-    padding: 10px 17px;
+  margin-top: 5px;
+  &:first-child {
+    & p {
+      position: relative;
+      top: -4px;
+    }
+    margin-top: unset;
   }
-
-  &_show {
-    height: 48px;
-    padding: 0 15px 0 21px;
+  &__icon {
+    @include icon-button;
+    width: 24px;
+    height: 24px;
+    margin-right: 13px;
+    cursor: auto;
+  }
+  &__text-icon {
+    display: none;
+    @include desktop-text-small-bold;
+    color: $main-black;
   }
 
   &__text {
-    margin-right: 10px;
-  }
-
-  &__counter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 32px;
-    height: 32px;
-    padding: 4px;
-    border-radius: 50%;
-    background: #1373e51a;
+    width: 675px;
+    & p {
+      @include desktop-text-normal;
+      color: $text;
+    }
   }
 }
 
@@ -331,7 +310,7 @@
   &__title {
     display: flex;
     justify-content: center;
-    & h1 {
+    & h3 {
       @include desktop-h3;
       color: $main-black;
       position: relative;
